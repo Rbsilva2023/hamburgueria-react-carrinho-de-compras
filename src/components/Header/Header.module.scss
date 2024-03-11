@@ -1,0 +1,168 @@
+@import '../../variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+  background-color: $grey-0;
+  margin-bottom: 50px;
+  .limitRange {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  img {
+    cursor: pointer;
+  }
+  .headerSearch {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+
+    .btn {
+      outline: none;
+      background: none;
+      border: none;
+      position: relative;
+      > svg {
+        color: $cart-color;
+        width: 40px;
+        height: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          color: $gay-600;
+        }
+      }
+
+      > span {
+        width: 20px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-70%);
+        border-radius: 30%;
+        color: $color-white;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  input[type='text'] {
+    outline: none;
+    border: 1px solid $grey-100;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    background: $grey-100;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    background: none;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    > svg {
+      color: black;
+      font-weight: bold;
+      background: transparent;
+      transition: 0.3s;
+      &:hover {
+        color: $grey-300;
+      }
+    }
+  }
+}
+
+.animation {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1500px) {
+  .limitRange {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 10px;
+  }
+  .limitRange {
+    flex-direction: column;
+    padding: 5px;
+    img {
+      margin-bottom: 5px;
+    }
+  }
+  .form {
+    input {
+      margin-top: 3px;
+    }
+  }
+}

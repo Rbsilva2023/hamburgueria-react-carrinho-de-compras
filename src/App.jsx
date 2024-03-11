@@ -1,11 +1,11 @@
-import { HomePage } from "./pages/HomePage"
-
-function App() {
+import { HomePage } from './pages/HomePage';
+import './index.scss';
+const App = () => {
   return (
     <>
       <HomePage />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

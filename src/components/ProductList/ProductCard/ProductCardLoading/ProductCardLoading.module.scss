@@ -1,0 +1,95 @@
+@import '../../../../variables';
+
+.li {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 346px;
+  border: 2px solid $grey-100;
+  border-radius: 12px;
+  flex-direction: column;
+  transition: 0.3s;
+  animation: skeleton 1s linear infinite alternate;
+
+  .containerIMG {
+    display: flex;
+    justify-content: center;
+    background-color: $grey-0;
+    width: 100%;
+    margin-bottom: 10px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    animation: skeleton 1s linear infinite alternate;
+    .imgProduct {
+      width: 177px;
+      height: 177px;
+      object-fit: cover;
+      animation: skeleton 1s linear infinite alternate;
+      border-radius: 12px;
+    }
+  }
+
+  .infoProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    gap: 10px;
+    border-radius: 12px;
+    background-color: $color-white;
+    animation: skeleton 1s linear infinite alternate;
+    h3 {
+      animation: skeleton 1s linear infinite alternate;
+      width: 70px;
+      border-radius: 8px;
+      height: 25px;
+    }
+    .category {
+      width: 70px;
+      border-radius: 8px;
+      height: 25px;
+      animation: skeleton 1s linear infinite alternate;
+    }
+    .price {
+      width: 70px;
+      border-radius: 8px;
+      height: 25px;
+      animation: skeleton 1s linear infinite alternate;
+    }
+    .btn {
+      outline: none;
+      width: 106px;
+      height: 40px;
+      border: none;
+      border-radius: 8px;
+      color: $color-white;
+      background: $cart-color;
+      text-align: center;
+      pointer-events: none;
+      transition: 0.3s;
+      animation: skeleton 1s linear infinite alternate;
+    }
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-color: $grey-100;
+  }
+}
+
+.animation {
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,23 @@
+.ul {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+@media (max-width: 1357px) {
+  .ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .ul {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+}

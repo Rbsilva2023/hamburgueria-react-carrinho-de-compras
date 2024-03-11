@@ -1,0 +1,139 @@
+@import '../../variables';
+
+.containerModal {
+  max-width: 484px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 30%;
+  margin: 0 auto;
+
+  .cartBuy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $color-primary;
+    height: 57px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+
+    h2 {
+      color: $color-white;
+      font-weight: 700;
+    }
+
+    button {
+      background: none;
+      outline: none;
+      border: none;
+      color: $color-white;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        color: rgba(255, 0, 0, 0.356);
+      }
+    }
+  }
+
+  .total {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: $color-white;
+
+    .totalFlex {
+      width: 96%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        color: $gay-600;
+        font-weight: 600;
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      height: 60px;
+      width: 454px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      color: $color-white;
+      background-color: $cart-color;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: $color-primary;
+      }
+    }
+  }
+}
+
+.ul {
+  width: 484px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 300px;
+  overflow: scroll;
+  padding: 10px;
+  background-color: $color-white;
+  overflow-x: hidden;
+}
+
+.ul::-webkit-scrollbar {
+  width: 12px;
+}
+
+.ul::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+.ul::-webkit-scrollbar-thumb {
+  background-color: $gay-600;
+  border-radius: 20px;
+  border: 3px solid $grey-100;
+}
+
+.hr {
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+  background-color: $cart-color;
+}
+@media (max-width: 500px) {
+  .ul {
+    width: 400px;
+    max-width: 100%;
+  }
+  .containerModal {
+    padding: 5px;
+  }
+  .total {
+    width: 100% !important;
+    button {
+      width: 100% !important;
+    }
+  }
+  .totalFlex {
+    width: 200px;
+  }
+}
+
+

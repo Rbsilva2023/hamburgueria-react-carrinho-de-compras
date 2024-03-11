@@ -1,0 +1,67 @@
+@import '../../../variables';
+
+.li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .cardImage {
+      width: 82px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $grey-100;
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 53px;
+        object-fit: cover;
+      }
+    }
+
+    .infoProduct {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 300px;
+      align-items: flex-start;
+      span {
+        color: $color-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    svg {
+      color: $cart-color;
+      background: none;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: $grey-300;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .infoProduct {
+    width: 100% !important;
+  }
+  .li {
+    width: 100%;
+  }
+}

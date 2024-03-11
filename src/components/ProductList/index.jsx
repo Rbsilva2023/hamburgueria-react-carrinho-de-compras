@@ -1,11 +1,17 @@
-import { ProductCard } from "./ProductCard";
+import { useState } from 'react';
+import { ProductCard } from './ProductCard';
+import styles from './ProductList.module.scss';
 
-export const ProductList = ({ productList }) => {
-   return (
-      <ul>
-         {productList.map((product) => (
-            <ProductCard key={product.id} product={product} />
-         ))}
-      </ul>
-   );
+export const ProductList = ({ productList, onClick }) => {
+  return (
+    <ul className={styles.ul}>
+      {productList.map((product) => (
+        <ProductCard
+          onClick={() => onClick(product)}
+          key={product.id}
+          product={product}
+        />
+      ))}
+    </ul>
+  );
 };
